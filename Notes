@@ -1,0 +1,16 @@
+Model Context Protocol:
+It is used to connect AI agents with external tools and data through standardized protocol.
+MCP Host – AI Application. It is responsible for running AI experience.
+MCP Client – Component inside host that communicates with MCP server.
+MCP Server – This is where capabilities are exposed.
+Tool – Does something
+Resource – Provide info/data.
+MCP can also expose reusable prompt templates.
+MCP Inspector – Testing tool for MCP server.
+
+Practical Learning:
+Created simple MCP Calculator and based on that I have created MCP server, tools and I have also run the MCP Inspector and also tested MCP tools.
+
+References:
+https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro
+https://www.geeksforgeeks.org/artificial-intelligence/model-context-protocol-mcp/
