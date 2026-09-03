@@ -14,3 +14,13 @@ Created simple MCP Calculator and based on that I have created MCP server, tools
 References:
 https://modelcontextprotocol.io/docs/2026-07-28/getting-started/intro
 https://www.geeksforgeeks.org/artificial-intelligence/model-context-protocol-mcp/
+
+03-09-2026
+MCP Client - It connects AI application to MCP Server. It discovers available tools and call required tools.
+LLM Integration - Integrated LLM with MCP to understand the user's request and select required MCP tools.
+
+Practical Learning:
+Created an MCP Client for the Calculator MCP Server and tested list of tools and call tools. Integrated Groq LLM with MCP. The LLM can select the required calculator tool based on the user's question, the MCP Client executes the tool, and the result is sent back to the LLM.
+
+Flow:
+User - Groq LLM - MCP Client - MCP Server - Tool - Result - LLM - Final Response.
