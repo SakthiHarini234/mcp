@@ -24,3 +24,14 @@ Created an MCP Client for the Calculator MCP Server and tested list of tools and
 
 Flow:
 User - Groq LLM - MCP Client - MCP Server - Tool - Result - LLM - Final Response.
+
+04-09-2026
+MCP Resources - Provide info or data to MCP Client. It is used to list and read available resources.
+MCP Prompts - It is a reusable prompt template used to generate specific instructions for LLM
+Database Integration - Connected a SQLite database with the MCP Server to store calculator expressions and results.
+
+Practical Learning:
+Created MCP Resources for calculator help and stored calculations. Created an MCP Prompt to explain calculations step by step. Connected a SQLite database and read the stored calculation data through an MCP resource
+
+Flow:
+MCP Client(Ask info) - MCP Server(Gives requested resource or prompt) - Resource/Prompt(Gives required info) - MCP Client(Receive info)
