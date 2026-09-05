@@ -35,3 +35,52 @@ Created MCP Resources for calculator help and stored calculations. Created an MC
 
 Flow:
 MCP Client(Ask info) - MCP Server(Gives requested resource or prompt) - Resource/Prompt(Gives required info) - MCP Client(Receive info)
+
+05-09-2026
+Agent Loop = LLM decides - Tool executes - Result goes back to LLM - Final answer.
+Multiple Tool Calls - Allows the agent to use multiple tools for one task.
+Sequential Execution - Executes tools one by one using the previous result.
+Conditional Execution - LLM decides which tool is needed based on the task.
+Context Management - Keeps previous messages, tool calls, and results.
+Error Recovery - Handles tool errors and sends the error back to the LLM.
+Multi-Step Agent - Completes a task through multiple steps using MCP tools.
+Human Approval - User can approve or reject a tool before it executes.
+
+Practical Learning:
+Created an MCP Agent using Groq LLM and MCP Client. Implemented an agent loop that allows the LLM to decide when to use MCP tools. Executed multiple tools sequentially, maintained context between tool calls, handled tool execution errors, and added human approval before executing sensitive tools.
+
+Flow:
+                       ┌───────────────┐
+                       │     User      │
+                       └───────┬───────┘
+                               ↓
+                       ┌───────────────┐
+                       │    Groq LLM   │
+                       └───────┬───────┘
+                               ↓
+                       Need MCP Tool?
+                         ↙           ↘
+                       No             Yes
+                       ↓               ↓
+                 Final Answer    Human Approval?
+                                    ↙      ↘
+                                  No        Yes
+                                  ↓          ↓
+                               Cancel    MCP Client
+                                             ↓
+                                        MCP Server
+                                             ↓
+                                           Tool
+                                             ↓
+                                          Result
+                                             ↓
+                                      Update Context
+                                             ↓
+                                          LLM
+                                             ↓
+                                    Another Tool?
+                                      ↙       ↘
+                                    Yes        No
+                                     ↓          ↓
+                                  Tool Loop  Final Answer
+                                  
