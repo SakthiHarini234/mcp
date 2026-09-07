@@ -84,3 +84,18 @@ Flow:
                                      ↓          ↓
                                   Tool Loop  Final Answer
                                   
+07-09-2026
+JSON-RPC - Used for communication between MCP Client and MCP Server using requests and responses.
+MCP Lifecycle - Defines how the MCP Client connects, initializes, communicates, and ends the session with the Server.
+Capability Negotiation - Allows the Client and Server to identify the features supported by each other.
+Notifications - Used to send updates without requiring a response.
+Pagination - Divides large data into smaller pages for easier processing.
+Cancellation - Allows a running task to be cancelled before it finishes.
+Progress - Used to track and show the progress of a long-running task.
+Logging - Used to monitor application activity, warnings, and errors.
+
+Practical Learning:
+Built a basic JSON-RPC communication flow and explored the MCP lifecycle and capability negotiation. Implemented examples for notifications, pagination, cancellation, and progress tracking. Also explored MCP logging and learned how to handle the current SDK's logging deprecation using application-level logging.
+
+Flow:
+MCP Client - MCP Server - MCP Protocol - Request/Response or Notification - Result/Update - MCP Client
