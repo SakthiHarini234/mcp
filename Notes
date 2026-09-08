@@ -99,3 +99,17 @@ Built a basic JSON-RPC communication flow and explored the MCP lifecycle and cap
 
 Flow:
 MCP Client - MCP Server - MCP Protocol - Request/Response or Notification - Result/Update - MCP Client
+
+08-09-2026
+STDIO Transport - Used for local communication between the MCP Client and MCP Server through standard input and output.
+Streamable HTTP - Used to communicate between the MCP Client and MCP Server over HTTP.
+HTTP MCP Server - Created an MCP Server that runs through Streamable HTTP and exposes tools, resources, and prompts.
+Remote MCP Client - Connected an MCP Client to a remote MCP Server using an HTTP endpoint.
+Basic Authentication - Implemented Bearer Token authentication to verify the MCP Client before allowing access to the MCP Server.
+Environment Variables - Used environment variables to configure transport, host, port, and authentication token without hardcoding values.
+Error Handling - Used exception handling to manage MCP connection, authentication, and communication errors.
+Real-World MCP Server - Created a practical calculator MCP Server with tools, a resource, and a prompt.
+
+Practical Learning:
+Built an MCP Client and Server using STDIO and Streamable HTTP. Implemented remote communication, Bearer Token authentication, environment based configuration, error handling, and a real-world calculator server with tools, resources and prompts.
+
